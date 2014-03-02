@@ -1,12 +1,16 @@
 package br.com.nerdsolutions.transferencia.dominio.modelo;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.not;
+import static org.hamcrest.Matchers.nullValue;
+import static org.mockito.Mockito.mock;
+
 import java.math.BigDecimal;
 import java.util.Calendar;
 
-import static org.hamcrest.MatcherAssert.*;
-import static org.hamcrest.Matchers.*;
 import org.junit.Test;
-import static org.mockito.Mockito.*;
 
 /**
  * Testes de unidade de {@link Transferencia}.
@@ -30,6 +34,7 @@ public class TransferenciaTest {
 		assertThat(transferencia.getOrigem(), is(equalTo(origem)));
 		assertThat(transferencia.getDestino(), is(equalTo(destino)));
 		assertThat(transferencia.getValor(), is(equalTo(valor)));
+		assertThat(transferencia.getTaxa(), is(not(nullValue())));
 		assertThat(transferencia.getData(), is(equalTo(data)));
 		assertThat(transferencia.getTipo(), is(equalTo(Tipo.A)));
 	}

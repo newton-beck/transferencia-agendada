@@ -55,7 +55,7 @@ public class Transferencia {
 		public TransferenciaComTipo(Tipo tipo) {
 			Transferencia.this.tipo = tipo;
 
-			// TODO Calcular o valor da taxa da transferência
+			Transferencia.this.taxa = tipo.calculaTaxaDa(Transferencia.this);
 		}
 
 		/**
@@ -155,6 +155,10 @@ public class Transferencia {
 	 */
 	public TransferenciaComOrigem de(Conta origem) {
 		return new TransferenciaComOrigem(origem);
+	}
+
+	public Calendar getCriacao() {
+		return criacao;
 	}
 
 	public Calendar getData() {
