@@ -1,0 +1,90 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="960" measuredH="582" mockupW="956" mockupH="578">
+  <controls>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::SubTitle" x="4" y="4" w="-1" h="-1" measuredW="249" measuredH="27" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Agendar%20transfer%EAncia</text>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::TextInput" x="151" y="70" w="-1" h="-1" measuredW="52" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>12345</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::Label" x="34" y="73" w="-1" h="-1" measuredW="102" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Conta%20de%20origem%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::TextInput" x="218" y="70" w="-1" h="-1" measuredW="23" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>6</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::Label" x="208" y="73" w="-1" h="-1" measuredW="10" measuredH="21" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>-</text>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::TextInput" x="151" y="112" w="-1" h="-1" measuredW="52" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>56789</text>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::Label" x="34" y="115" w="-1" h="-1" measuredW="105" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Conta%20de%20destino%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::TextInput" x="218" y="112" w="-1" h="-1" measuredW="22" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>0</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::Label" x="208" y="115" w="-1" h="-1" measuredW="10" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>-</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::Label" x="4" y="154" w="-1" h="-1" measuredW="135" measuredH="21" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Valor%20da%20transfer%EAncia%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::TextInput" x="151" y="151" w="90" h="-1" measuredW="57" measuredH="27" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>550%2C00</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::Label" x="4" y="226" w="-1" h="-1" measuredW="131" measuredH="21" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Tipo%20da%20transfer%EAncia%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::RadioButtonGroup" x="151" y="226" w="-1" h="-1" measuredW="809" measuredH="325" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%28o%29%20A%20-%20Opera%E7%F5es%20do%20tipo%20A%20tem%20uma%20taxa%20de%20%242%20mais%203%25%20do%20valor%20da%20trasfer%EAncia.%0A%28%20%29%20B%20-%20Opera%E7%F5es%20do%20tipo%20B%20tem%20uma%20taxa%20de%20%2410%20para%20pedidos%20com%20agendamento%20at%E9%2030%20dias%20da%20data%20de%20cadastro%20e%20%248%20para%20os%20demais.%0A%28%20%29%20C%20-%20Opera%E7%F5es%20do%20tipo%20C%20tem%20uma%20taxa%20regressiva%20conforme%20a%20data%20de%20agendamento%3A%0A%09Maior%20que%2030%20dias%20da%20data%20de%20cadastro%20-%201.2%25%3B%0A%09At%E9%2030%20dias%20da%20data%20de%20cadastro%20-%202.1%25%3B%0A%09At%E9%2025%20dias%20da%20data%20de%20cadastro%20-%204.3%25%3B%0A%09At%E9%2020%20dias%20da%20data%20de%20cadastro%20-%205.4%25%3B%0A%09At%E9%2015%20dias%20da%20data%20de%20cadastro%20-%206.7%25%3B%0A%09At%E9%2010%20dias%20da%20data%20de%20cadastro%20-%207.4%25%3B%0A%09At%E9%20%205%20dias%20da%20data%20de%20cadastro%20-%208.3%25.%0A%20%0A%28%20%29%20D%20-%20Opera%E7%F5es%20do%20tipo%20D%20tem%20a%20taxa%20igual%20a%20A%2C%20B%20ou%20C%20dependendo%20do%20valor%20da%20transfer%EAncia%3A%0A%09Valores%20at%E9%20%2425.000%2C00%20seguem%20a%20taxa%E7%E3o%20tipo%20A%3B%0A%09Valores%20de%20%2425.001%2C00%20at%E9%20%24120.000%2C00%20seguem%20a%20taxa%E7%E3o%20tipo%20B%3B%0A%09Valores%20maiores%20que%20%24120.000%2C00%20seguem%20a%20taxa%E7%E3o%20tipo%20C.</text>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::Label" x="4" y="190" w="-1" h="-1" measuredW="133" measuredH="21" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Data%20da%20transfer%EAncia%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::DateChooser" x="151" y="188" w="-1" h="-1" measuredW="117" measuredH="25" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>10/03/2014</text>
+      </controlProperties>
+    </control>
+    <control controlID="52" controlTypeID="com.balsamiq.mockups::BreadCrumbs" x="4" y="31" w="-1" h="-1" measuredW="241" measuredH="24" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Transfer%EAncias%2C%20Agendar%20transfer%EAncia</text>
+      </controlProperties>
+    </control>
+    <control controlID="53" controlTypeID="com.balsamiq.mockups::Button" x="151" y="555" w="-1" h="-1" measuredW="157" measuredH="27" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>545684</color>
+        <text>Agendar%20transfer%EAncia</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
