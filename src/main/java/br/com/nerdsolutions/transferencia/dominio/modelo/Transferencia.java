@@ -142,8 +142,21 @@ public class Transferencia {
 	 */
 	private Tipo tipo;
 
+	/**
+	 * Cria uma transferência com uma data de criação de agora.
+	 */
 	public Transferencia() {
-		criacao = Calendar.getInstance();
+		this(Calendar.getInstance());
+	}
+
+	/**
+	 * Cria uma transferência.
+	 * 
+	 * @param criacao
+	 *            data de criação
+	 */
+	public Transferencia(Calendar criacao) {
+		this.criacao = criacao;
 	}
 
 	/**
