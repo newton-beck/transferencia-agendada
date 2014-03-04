@@ -1,4 +1,4 @@
-package br.com.nerdsolutions.transferencia.infraestrutura.converter;
+package br.com.nerdsolutions.transferencia.infraestrutura.converter.vraptor;
 
 import java.text.MessageFormat;
 import java.text.ParseException;
