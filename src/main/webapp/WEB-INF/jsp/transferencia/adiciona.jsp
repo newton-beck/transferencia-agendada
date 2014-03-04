@@ -23,11 +23,11 @@
 
 		<label for="numero-origem" class="block-label">Conta de origem</label>
 		<input id="numero-origem" type="number" name="dto.origem.numero" size="5" maxlength="5" value="${dto.origem.numero }" /> - 
-		<input type="number" name="dto.origem.digitoVerificador" size="1" maxlength="1" value="${dto.origem.digitoVerificador }" />
+		<input id="digito-verificador-origem" type="number" name="dto.origem.digitoVerificador" size="1" maxlength="1" value="${dto.origem.digitoVerificador }" />
 		
 		<label for="numero-destino" class="block-label">Conta de destino</label>
 		<input id="numero-destino" type="number" name="dto.destino.numero" size="5" maxlength="5" value="${dto.destino.numero }" /> - 
-		<input type="number" name="dto.destino.digitoVerificador" size="1" maxlength="1" value="${dto.destino.digitoVerificador }" />
+		<input id="digito-verificador-destino" type="number" name="dto.destino.digitoVerificador" size="1" maxlength="1" value="${dto.destino.digitoVerificador }" />
 		
 		<label for="valor" class="block-label">Valor da transferência</label>
 		<input id="valor" type="number" name="dto.valor" size="6" value="${dto.valor }" /> 
@@ -57,7 +57,7 @@
 		
 		<br />
 		
-		<button type="submit">Agendar transferência</button>
+		<button id="agendar-transferencia" type="submit">Agendar transferência</button>
 
 	</form>
 
