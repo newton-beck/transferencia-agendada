@@ -13,7 +13,6 @@ import org.mockito.Answers;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import br.com.caelum.vraptor.util.test.MockResult;
 import br.com.caelum.vraptor.util.test.MockValidator;
 import br.com.caelum.vraptor.validator.ValidationException;
 import br.com.nerdsolutions.transferencia.dominio.modelo.Conta;
@@ -32,8 +31,6 @@ public class TransferenciaControllerTest {
 
 	MockValidator validator;
 
-	MockResult result;
-
 	@Mock
 	TodasTransferencias todasTransferencias;
 
@@ -45,13 +42,12 @@ public class TransferenciaControllerTest {
 		MockitoAnnotations.initMocks(this);
 
 		this.validator = new MockValidator();
-		this.result = new MockResult();
 	}
 
 	@Test(expected = ValidationException.class)
 	public void naoDeveAdicionarUmTransferenciaInvalida() {
 		TransferenciaController controller = new TransferenciaController(
-				this.validator, this.result, this.todasTransferencias);
+				this.validator, this.todasTransferencias);
 
 		controller.adiciona(this.transferencia);
 	}
@@ -72,7 +68,7 @@ public class TransferenciaControllerTest {
 		when(this.transferencia.getTipo()).thenReturn(Tipo.A);
 
 		TransferenciaController controller = new TransferenciaController(
-				this.validator, this.result, this.todasTransferencias);
+				this.validator, this.todasTransferencias);
 
 		controller.adiciona(this.transferencia);
 

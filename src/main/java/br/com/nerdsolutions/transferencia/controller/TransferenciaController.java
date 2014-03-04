@@ -8,7 +8,6 @@ import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Resource;
-import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.Validator;
 import br.com.caelum.vraptor.validator.Validations;
 import br.com.nerdsolutions.transferencia.dominio.modelo.Conta;
@@ -28,20 +27,17 @@ public class TransferenciaController {
 
 	private final Validator validator;
 
-	private final Result result;
-
 	private final TodasTransferencias todasTransferencias;
 
-	public TransferenciaController(Validator validator, Result result,
+	public TransferenciaController(Validator validator,
 			TodasTransferencias todasTransferencias) {
 		this.validator = validator;
-		this.result = result;
 		this.todasTransferencias = todasTransferencias;
 	}
 
 	@Get
 	@Path("/nova")
-	public void adiciona() {
+	public void formulario() {
 
 	}
 
@@ -50,7 +46,7 @@ public class TransferenciaController {
 	public void adiciona(TransferenciaDTO dto) {
 		valida(dto);
 
-		this.validator.onErrorForwardTo(this).adiciona();
+		this.validator.onErrorForwardTo(this).formulario();
 
 		Conta origem = new Conta().comNumero(dto.getOrigem().getNumero())
 				.comDigitoVerificador(dto.getOrigem().getDigitoVerificador());
@@ -63,8 +59,6 @@ public class TransferenciaController {
 				.naData(dto.getData()).doTipo(dto.getTipo()).cria();
 
 		this.todasTransferencias.adiciona(transferencia);
-
-		this.result.forwardTo(this).listaTodas();
 	}
 
 	@Get
