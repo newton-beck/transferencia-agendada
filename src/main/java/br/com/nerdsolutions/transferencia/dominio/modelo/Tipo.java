@@ -58,15 +58,16 @@ public enum Tipo {
 	/**
 	 * Calculador de taxa da transferência.
 	 */
-	private final CalculadorDeTaxa taxa;
+	private final CalculadorDeTaxa calculador;
 
 	/**
 	 * Cria uma enum de taxa.
 	 * 
-	 * @param taxa
+	 * @param calculador
+	 *            calculador da taxa
 	 */
-	private Tipo(CalculadorDeTaxa taxa) {
-		this.taxa = taxa;
+	private Tipo(CalculadorDeTaxa calculador) {
+		this.calculador = calculador;
 	}
 
 	/**
@@ -77,7 +78,7 @@ public enum Tipo {
 	 * @return valor da taxa da transferência bancária
 	 */
 	public BigDecimal calculaTaxaDa(Transferencia transferencia) {
-		return this.taxa.calculaTaxaDa(transferencia);
+		return this.calculador.calculaTaxaDa(transferencia);
 	}
 
 }
