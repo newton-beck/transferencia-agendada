@@ -13,7 +13,9 @@
 
 	<h1>Agendar transferência</h1>
 
-	<a href="<c:url value="/transferencia/todas" />">Transferências agendadas</a> &gt; Agendar transferência 
+	<p>
+		<a href="<c:url value="/transferencia/todas" />">Transferências agendadas</a> &gt; Agendar transferência 
+	<p>
 
 	<ul>
 		<c:forEach items="${errors }" var="error">
