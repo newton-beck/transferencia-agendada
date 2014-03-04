@@ -184,4 +184,56 @@ public class Transferencia {
 	public BigDecimal getValor() {
 		return valor;
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((data == null) ? 0 : data.hashCode());
+		result = prime * result + ((destino == null) ? 0 : destino.hashCode());
+		result = prime * result + ((origem == null) ? 0 : origem.hashCode());
+		result = prime * result + ((taxa == null) ? 0 : taxa.hashCode());
+		result = prime * result + ((tipo == null) ? 0 : tipo.hashCode());
+		result = prime * result + ((valor == null) ? 0 : valor.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Transferencia other = (Transferencia) obj;
+		if (data == null) {
+			if (other.data != null)
+				return false;
+		} else if (!data.equals(other.data))
+			return false;
+		if (destino == null) {
+			if (other.destino != null)
+				return false;
+		} else if (!destino.equals(other.destino))
+			return false;
+		if (origem == null) {
+			if (other.origem != null)
+				return false;
+		} else if (!origem.equals(other.origem))
+			return false;
+		if (taxa == null) {
+			if (other.taxa != null)
+				return false;
+		} else if (!taxa.equals(other.taxa))
+			return false;
+		if (tipo != other.tipo)
+			return false;
+		if (valor == null) {
+			if (other.valor != null)
+				return false;
+		} else if (!valor.equals(other.valor))
+			return false;
+		return true;
+	}
 }
