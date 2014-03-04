@@ -59,6 +59,23 @@ public class Transferencia {
 		}
 
 		/**
+		 * Cria a transferência bancária.
+		 * 
+		 * @return {@link Transferencia}
+		 */
+		public Transferencia cria() {
+			return Transferencia.this;
+		}
+
+	}
+
+	public class TransferenciaComValor {
+
+		public TransferenciaComValor(BigDecimal valor) {
+			Transferencia.this.valor = valor;
+		}
+
+		/**
 		 * Define a data na qual será realizada a transferência.
 		 * 
 		 * @param data
@@ -71,10 +88,10 @@ public class Transferencia {
 
 	}
 
-	public class TransferenciaComValor {
+	public class TransferenciaNaData {
 
-		public TransferenciaComValor(BigDecimal valor) {
-			Transferencia.this.valor = valor;
+		public TransferenciaNaData(Calendar data) {
+			Transferencia.this.data = data;
 		}
 
 		/**
@@ -86,23 +103,6 @@ public class Transferencia {
 		 */
 		public TransferenciaComTipo doTipo(Tipo tipo) {
 			return new TransferenciaComTipo(tipo);
-		}
-
-	}
-
-	public class TransferenciaNaData {
-
-		public TransferenciaNaData(Calendar data) {
-			Transferencia.this.data = data;
-		}
-
-		/**
-		 * Cria a transferência bancária.
-		 * 
-		 * @return {@link Transferencia}
-		 */
-		public Transferencia cria() {
-			return Transferencia.this;
 		}
 
 	}

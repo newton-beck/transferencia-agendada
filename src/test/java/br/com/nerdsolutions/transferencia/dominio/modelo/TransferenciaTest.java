@@ -28,7 +28,7 @@ public class TransferenciaTest {
 		Calendar data = Calendar.getInstance();
 
 		Transferencia transferencia = new Transferencia().de(origem)
-				.para(destino).comValor(valor).doTipo(Tipo.A).naData(data)
+				.para(destino).comValor(valor).naData(data).doTipo(Tipo.A)
 				.cria();
 
 		assertThat(transferencia.getOrigem(), is(equalTo(origem)));
