@@ -49,6 +49,14 @@ public class Conta {
 		return new ContaComNumero(numero);
 	}
 
+	public Integer getDigitoVerificador() {
+		return digitoVerificador;
+	}
+
+	public Integer getNumero() {
+		return numero;
+	}
+
 	/**
 	 * Recupera o número da conta no formato XXXXX-X.
 	 * 
@@ -56,18 +64,6 @@ public class Conta {
 	 */
 	public String getNumeroFormatado() {
 		return numero + "-" + digitoVerificador;
-	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime
-				* result
-				+ ((digitoVerificador == null) ? 0 : digitoVerificador
-						.hashCode());
-		result = prime * result + ((numero == null) ? 0 : numero.hashCode());
-		return result;
 	}
 
 	@Override
@@ -90,6 +86,18 @@ public class Conta {
 		} else if (!numero.equals(other.numero))
 			return false;
 		return true;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime
+				* result
+				+ ((digitoVerificador == null) ? 0 : digitoVerificador
+						.hashCode());
+		result = prime * result + ((numero == null) ? 0 : numero.hashCode());
+		return result;
 	}
 
 }
