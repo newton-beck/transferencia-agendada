@@ -1,5 +1,6 @@
 package br.com.nerdsolutions.transferencia.infraestrutura.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import br.com.caelum.vraptor.ioc.Component;
@@ -10,6 +11,7 @@ import br.com.nerdsolutions.transferencia.infraestrutura.converter.mongo.Transfe
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
 
 /**
  * Data Access Object de {@link Transferencia}.
@@ -46,7 +48,19 @@ public class TransferenciaDAO implements TodasTransferencias {
 	 * @see TodasTransferencias#listaTodas()
 	 */
 	public List<Transferencia> listaTodas() {
-		return null;
+		DBCollection transferencias = db.getCollection(COLLECTION);
+
+		DBCursor cursor = transferencias.find();
+
+		ArrayList<Transferencia> retorno = new ArrayList<Transferencia>();
+
+		while (cursor.hasNext()) {
+			BasicDBObject dbObject = new BasicDBObject(cursor.next().toMap());
+			Transferencia transferencia = converter.fromDBObject(dbObject);
+			retorno.add(transferencia);
+		}
+
+		return retorno;
 	}
 
 }
