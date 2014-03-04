@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import br.com.nerdsolutions.transferencia.aceitacao.page.AgendaTransferencia;
+import br.com.nerdsolutions.transferencia.aceitacao.page.ConfirmaAgendamento;
 import br.com.nerdsolutions.transferencia.dominio.modelo.Tipo;
 
 /**
@@ -55,7 +56,7 @@ public class AgendaTransferenciaTest {
 
 		AgendaTransferencia pagina = new AgendaTransferencia(driver);
 
-		pagina.acessa()
+		ConfirmaAgendamento confirmaAgendamento = pagina.acessa()
 				.comContaDeDestino(12345, 1)
 				.comContaDeOrigem(56789, 0)
 				.comValor(550.00)
@@ -63,6 +64,6 @@ public class AgendaTransferenciaTest {
 						data.get(Calendar.YEAR)).doTipo(Tipo.A)
 				.agendaTransferencia();
 		
-		// TODO Verificar o resultado do agendamento
+		assertTrue(confirmaAgendamento.temMensagem("Transferência agendada :)"));
 	}
 }

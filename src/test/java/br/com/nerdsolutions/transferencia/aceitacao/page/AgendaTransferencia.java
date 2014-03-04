@@ -24,8 +24,10 @@ public class AgendaTransferencia {
 		return this;
 	}
 
-	public void agendaTransferencia() {
+	public ConfirmaAgendamento agendaTransferencia() {
 		driver.findElement(By.id("agendar-transferencia")).click();
+
+		return new ConfirmaAgendamento(driver);
 	}
 
 	public AgendaTransferencia comContaDeDestino(Integer numero,
@@ -46,7 +48,7 @@ public class AgendaTransferencia {
 
 	public AgendaTransferencia comData(Integer dia, Integer mes, Integer ano) {
 		driver.findElement(By.id("data")).sendKeys(
-				dia.toString() + mes.toString() + ano.toString());
+				ano.toString() + "-" + mes.toString() + "-" + dia.toString());
 		return this;
 	}
 
