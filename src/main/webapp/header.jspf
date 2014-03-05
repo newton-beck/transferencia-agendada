@@ -1,16 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1" isELIgnored="false" %>
+	pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<!DOCTYPE html >
+<!doctype html>
 <html>
 <head>
-
-<link rel="stylesheet" href="<c:url value="/resources/css/bootstrap.css" />" />
-
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-
+<meta charset="ISO-8859-1">
 <title>Transferências Agendadas</title>
-
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet"
+	href="<c:url value="/resources/css/bootstrap.css" />" />
 </head>
 <body>
